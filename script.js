@@ -1,12 +1,9 @@
 // function 1
 
 function getRandomArray(length, min, max) {
-const randomArray = [];
-randomArray.length = length;
-const newArray = [];
-randomArray.forEach((number) => {
+const randomArray = Array.from({length: length});
+const newArray = randomArray.map((number) => {
 number = (Math.floor(Math.random() * (max-min) + 1 + min);
-newArray.push(number)
 });
 return newArray;
 }
@@ -15,7 +12,7 @@ document.write (getRandomArray(6, 5, 25));
 
 // function 3
 
-/*function getAverage (...numbers) {
+function getAverage (...numbers) {
 let averageArray = numbers.filter((number) => Number.isInteger(number));
 const sum = (averageArray.reduce((acc, item) => acc += item);
 return (sum/averageArray.length);
@@ -25,7 +22,7 @@ document.write (getAverage(1,6,3,8,5,4));
 
 //function 5
 
-function filterEvenNumbers(...numbers) {
+/*function filterEvenNumbers(...numbers) {
   const finalNumbers = numbers.filter((number) => number % 2 > 0);
   return finalNumbers;
 }
