@@ -2,9 +2,8 @@
 
 function getRandomArray(length, min, max) {
 const randomArray = Array.from({length: length});
-const newArray = randomArray.map((number) => {
-number = (Math.floor(Math.random() * (max-min) + 1 + min);
-});
+const newArray = randomArray.map((number) =>
+number = Math.floor(Math.random() * (max - min + 1) + min));
 return newArray;
 }
 
@@ -14,7 +13,7 @@ document.write (getRandomArray(6, 5, 25));
 
 function getAverage (...numbers) {
 let averageArray = numbers.filter((number) => Number.isInteger(number));
-const sum = (averageArray.reduce((acc, item) => acc += item);
+const sum = averageArray.reduce((acc, item) => acc += item);
 return (sum/averageArray.length);
 }
 
